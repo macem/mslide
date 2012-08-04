@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+
+<head>
+ <title>textSlide plugin</title>
+ <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8"/>
+ <meta name="description" content="textSlider plugin"/>
+ <meta name="language" content="pl"/>
+ <meta name="version" content="0.7"/>
+ 
+ <link rel="stylesheet" type="text/css" href="css/jquery.textslide.css" media="screen"/>
+
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0; 
+}
+body {
+	margin: 120px 0 0;
+	font-family: Tahoma;
+	color: #6e6f71;
+	text-align: center;
+	background: url(css/img/container-bg.gif) repeat-x 0 100px;
+}
+a {
+	color: #007ed8;
+}
+.container {
+	margin: 15px auto 25px;
+	width: 800px;
+	text-align: left;
+}
+.container strong {
+	position: absolute;
+	right: 0;
+	top: 79px;	
+	font-size: 12px;
+	font-weight: normal;
+	padding: 13px 7px 20px 16px;
+	background: url(css/img/version-bg.png) no-repeat;
+}
+.container h1 {
+	color: #fff;
+	font-size: 18px;
+	font-weight: normal;
+	/*position: absolute;*/
+	width: 230px;
+	padding: 0 0 15px 0;
+}
+.container p {
+	color: #fff;
+	font-size: 12px;
+	width: 230px;
+	margin: 0;
+	float: left;
+	/*position: absolute;*/
+}
+.button-download {
+	text-indent: -9999em;
+	display: inline-block;
+	position: absolute;
+	right: 5px;
+	width: 182px;
+	padding: 10px 0;
+	margin: 0 15px;
+	background: url(css/img/download.png) no-repeat;
+}
+p {
+	display: inline-block;
+}
+h2 {
+	font-family: Georgia;
+	font-weight: normal;
+	font-size: 1.8em;
+	margin: 55px 0 5px;
+	/*font-style: italic;
+	border: solid 1px red;*/
+
+}
+em {
+	/*font-size: 11px;
+	display: block;
+	position: absolute;*/
+}
+small {
+	color: #aaa;
+	font-size: 0.7em;
+	text-transform: uppercase;
+	font-family: Verdana;
+	letter-spacing: 0.1em;
+}
+
+
+#slider {
+	width: 505px;
+	padding: 0 25px;
+	margin: -35px 0 0 260px;
+}
+#slider .t-pane {
+	padding: 10px 0;
+}
+#slider .t-play {
+	display: none;
+}
+#slider .t-slide {
+	width: 81px;
+	height: 84px;
+	margin: 0 9px;
+}
+#slider img {
+	border: solid 1px #868686;
+}
+#slider .t-current,
+#slider img:hover {
+	margin: -10px 0;
+	width: 99px;
+	height: 104px;
+}
+#slider .t-next,
+#slider .t-previous {
+	width: 16px;
+	height: 16px;
+	opacity: 1;
+	top: 44px;
+	overflow: hidden;
+	background: url(css/img/controls.gif) no-repeat;
+}
+#slider .t-next {
+	background: url(css/img/controls.gif) no-repeat -16px 0;
+}
+
+</style>
+  
+<script src="js/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="js/jquery.textslide.js" type="text/javascript"></script>
+<script src="js/jquery.textslide.auto.js" type="text/javascript"></script>
+<script src="js/jquery.textslide.wheel.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+$(function() {
+	$('#slider').textSlide ({/*auto: 'next', */step: 1, slide: 0, slides: 5, wait: 1500, animoption: [600], onSlideEnd:function($pane,o) {
+		$(o.data).removeClass ('t-current');
+		$(o.data[o._nextslide + parseInt (o.slides / 2)]).addClass ('t-current');
+	}});
+});
+
+
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+ <h1>textSlide jQuery plugin <strong>release v0.7 (11.07.2010)</strong></h1>
+ <p>textSlide is a fast, full customizable jQuery plugin for sliding container of text, images, videos on the websites.</p>
+ 
+ <div id="slider" class="t-slider">
+  <img src="images/face1.jpg" alt="face 1"/>
+  <img src="images/face2.jpg" alt="face 2"/>
+  <img src="images/face1.jpg" alt="face 1"/>
+  <img src="images/face2.jpg" alt="face 2"/>
+  <img src="images/face1.jpg" alt="face 1"/>
+  <img src="images/face2.jpg" alt="face 2"/>
+  <img src="images/face1.jpg" alt="face 1"/>
+  <img src="images/face2.jpg" alt="face 2"/> 
+  <img src="images/face1.jpg" alt="face 1"/>
+  <img src="images/face2.jpg" alt="face 2"/>
+  <img src="images/face1.jpg" alt="face 1"/>
+  <img src="images/face2.jpg" alt="face 2"/>
+  <img src="images/face1.jpg" alt="face 1"/>
+  <img src="images/face2.jpg" alt="face 2"/>
+  <img src="images/face1.jpg" alt="face 1"/>
+  <img src="images/face2.jpg" alt="face 2"/>                 
+ </div>
+</div> 
+ <a href="" class="button-download">Download</a> 
+ <h2>Customizable Slider width CSS & jQuery</h2>
+
+ <small>by Marcin Sołtysiuk</small> <!--<em>25KB (Source + minified)</em>-->  
+  
+</body>
+</html>

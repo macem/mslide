@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+
+<head>
+
+ <title>textSlide plugin</title>
+ <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8"/>
+ <meta name="description" content="textSlider plugin"/>
+ <meta name="language" content="pl"/>
+ <meta name="version" content="0.7"/>
+ 
+ <link rel="stylesheet" type="text/css" href="css/jquery.textslide.css" media="screen"/>
+  
+<script src="js/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="js/jquery.textslide.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+$(function() {
+	$('#slider-0').textSlide ({elements: '> img', autosize: true, auto: 'next', axis: 'vertical'});
+	$('#slider-1').textSlide ({elements: '> img', slides: 3, autosize: true, step: 3});
+});
+</script>
+
+<style>
+body {
+	background-color: #fff;
+}
+img {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+h1, h2, h3 {
+	color: #000;
+	font-size: 1.9em;
+	font-weight: normal;
+	font-family: 'myriad pro';	
+}
+h2 {
+	font-size: 1.5em;
+}
+ul.disc {
+	background-color: #f8f8f8;
+}
+#slider-0 {
+	border: solid 1px #eee;
+}
+#slider-0 .t-slide {
+	padding-bottom: 30px;
+}
+#slider-1 .t-slide {
+	width: 120px;
+	padding: 2px;
+}
+#slider-1 .t-previous {
+	width: 23px;
+	height: 19px;
+	left: auto;
+	right: 22px;
+	overflow: hidden;
+	opacity: 1;
+	background: url(css/img/sprite_carousel_v1.png) no-repeat 0 0;
+}
+#slider-1 .t-next {
+	width: 23px;
+	height: 19px;
+	overflow: hidden;
+	opacity: 1;
+	background: url(css/img/sprite_carousel_v1.png) no-repeat -22px 0;
+}
+#slider-1 .t-next:hover {
+	background-position: -22px -19px;	
+}
+#slider-1 .t-previous:hover {
+	background-position: 0 -19px;
+}
+#slider-1 .t-breadcrumb {
+	right: 15%;
+	width: 85%;
+}
+#slider-1 .t-breadcrumb a {
+	width: 13px;
+	background: url(css/img/sprite_carousel_v1.png) no-repeat -27px -41px;
+}
+#slider-1 .t-breadcrumb a.active {
+	background: url(css/img/sprite_carousel_v1.png) no-repeat -6px -41px;
+}
+</style>
+</head>
+
+<body class="tour">
+
+  <h1>jQuery plugin textSlide</h1>
+  <address>@author: <a href="mailto:acem@go2.pl" title="send email">marcin soltysiuk</a><br/>
+  @version: 0.7beta<br/>
+  @date: 08.03.2010<br/>
+  @download: <a href="http://macem.net/download/web/example-more.zip">zip</a><address>
+  
+  <div class="section-one">
+  <h2>» Images</h2>
+      <ul class="disc">
+      <li>small images</li>
+      <li>step 3 images</li>
+      </ul>
+         
+    <div id="slider-1">
+      <img src="images/delicious.png" alt="delicious" width="120px"/>
+      <img src="images/gallery.png" alt="gallery" width="120px"/>
+      <img src="images/impulse.png" alt="impulse" width="120px"/>
+      <img src="images/tour1.jpg" alt="slide" width="120px"/>
+      <img src="images/tour2.jpg" alt="slide" width="120px"/>
+      <img src="images/delicious.png" alt="delicious" width="120px"/>
+      <img src="images/gallery.png" alt="gallery" width="120px"/>
+      <img src="images/impulse.png" alt="impulse" width="120px"/>
+      <img src="images/tour1.jpg" alt="slide" width="120px"/>
+      <img src="images/tour2.jpg" alt="slide" width="120px"/>
+   </div> 
+   </div>
+   
+<h2>» Images autoslide</h2>
+      <ul class="disc">
+      <li>only images</li>
+      <li>autoslide</li>
+      <li>vetical slide</li>
+      </ul>
+      
+    <div id="slider-0">
+      <div  class="t-container">
+      <img src="images/delicious.png" alt="delicious"/>
+      <img src="images/tour1.jpg" alt="slide"/>
+      <img src="images/gallery.png" alt="gallery"/>
+      <img src="images/impulse.png" alt="impulse"/>
+      <img src="images/tour2.jpg" alt="slide"/>
+      </div>
+   </div>
+  
+</body>
+</html>

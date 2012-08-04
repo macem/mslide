@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+
+<head>
+ <title>textSlide plugin</title>
+ <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8"/>
+ <meta name="description" content="textSlider plugin"/>
+ <meta name="language" content="pl"/>
+ <meta name="version" content="0.7"/>
+ 
+ <link rel="stylesheet" type="text/css" href="css/jquery.textslide.css" media="screen"/>
+
+<style type="text/css">
+html {
+	background: #9aaeb9 url(css/slider-bg.gif) repeat-x 0 60px;
+}
+body {
+	width: 1050px;
+	margin: 0 auto;
+}
+h1 {
+	color: #fff;
+	margin: 10px 20px 30px;
+	font-weight: normal;
+	font-family: 'myriad pro';
+}
+#slider {
+	width: 972px;
+	padding-left: 30px;
+	padding-right: 30px; 
+}
+#slider .t-slide {
+	width: auto;
+	margin: 0 30px;
+}
+#slider .t-breadcrumb {
+	margin-left: 32px;
+}
+#slider .t-breadcrumb a.active,
+#slider .t-breadcrumb a {
+	background-image: url(css/slider-breadcrumb.gif);
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+#slider .t-notice {
+	color: #9aaeb9;
+	top: -6px;
+	font-family: 'myriad pro';
+}
+#slider .t-slide strong {
+	display: block;
+	color: #fff;
+	font-size: 1.5em;
+	font-weight: normal;
+	text-align: center;
+	font-family: 'myriad pro';
+}
+#slider .t-slide {
+	opacity: .85;
+	filter: alpha(opacity=85);
+}
+#slider .t-slide:hover {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+#slider .t-previous {
+	opacity: .5;
+	filter: alpha(opacity=50);
+	left: -4px;
+	width: 50px;
+	background: url(css/slider-arrow.gif) no-repeat -50px 50%;
+}
+#slider .t-next {
+	opacity: .5;
+	filter: alpha(opacity=50);
+	width: 50px;
+	right: -4px;
+	background: url(css/slider-arrow.gif) no-repeat 0 50%;
+}
+#slider .t-next:hover,
+#slider .t-previous:hover {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+#slider .t-play {
+	color: #fff;
+	width: 45px;
+	background-image: url(css/slider-breadcrumb.gif);	
+}
+#slider .t-breadcrumb-count {
+	color: #fff;
+	position: absolute;
+	right: 65px;
+}
+
+</style>
+  
+<script src="js/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="js/jquery.textslide.all.min.js" type="text/javascript"></script>
+<!--<script src="js/jquery.textslide.wheel.js" type="text/javascript"></script>
+<script src="js/jquery.textslide.breadcrumb.js" type="text/javascript"></script>
+<script src="js/jquery.textslide.auto.js" type="text/javascript"></script>-->
+
+<script type="text/javascript">
+
+$(function() {
+	//console.log('start init',timer.stop());
+	$('#slider').textSlide ({wheel: true, step: 1, slide: 0, slides: 3, wait: 300, animoption: [1500]});
+	//console.log('end',timer.stop()); //212-240 -- 159 -- 148
+});
+
+
+</script>
+
+</head>
+
+<body class="tour">
+
+
+ <h1>TextSlide plugin example</h1>
+ <div id="slider">
+  <div><img src="images/delicious.png" alt="delicious"/><strong>Delicious</strong></div>
+  <div><img src="images/gallery.png" alt="gallery"/><strong>Gallery</strong></div>
+  <div><img src="images/impulse.png" alt="impulse"/><strong>Impulse</strong></div>
+  <div><img src="images/sensor.png" alt="slide"/><strong>Sensor</strong></div>
+  <div><img src="images/technologic.png" alt="slide"/><strong>Technologic</strong></div>
+  <div><img src="images/zenko.png" alt="slide"/><strong>Zenko</strong></div>
+  <div><img src="images/technologic.png" alt="slide"/><strong>Technologic 1</strong></div>    
+  <div><img src="images/zenko.png" alt="slide"/><strong>Zenko 1</strong></div>      
+ </div>   
+  
+</body>
+</html>
